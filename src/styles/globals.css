@@ -1,27 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    background-color: #fff;
+}
+.red {
+        color: #e5767e;
+        background-color:#fff6f5 ;
+}
+.yellow {
+  color: #e7ca81;
+  background-color:#fbf8cc;
+}
+.green {
+  color: #76c2b3;
+  background-color:#f2fbfa;
+}
+.blue{
+  color: #5a5abd;
+  background-color:#f3f3fd;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+    :root {
+      --color-primary: 23, 36, 177;
+      --bg-gradient-red: rgba(245, 40, 145, 0.07);
+      --color-text_sumary_red: #e5767e;
+      --color-text_sumary_green: #76c2b3;
+      --color-text_sumary_yellow: #e7ca81;
+      --color-text_sumary_blue: #5a5abd;
+      --bg_sumary_red: #fff6f5;
+      --bg_sumary_green: #f2fbfa;
+      --bg_sumary_yellow: #fbf8cc;
+      --bg_sumary_blue: #f3f3fd;
+      
+      /* ... */
+    }
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
