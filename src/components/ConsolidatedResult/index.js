@@ -15,7 +15,7 @@ export default function ConsolidateResult({ scoreFinal }) {
             <div className="w-[180px] h-[180px] border-transparent rounded-full 
                 bg-gradient-to-b from-bg_gradient_blue to-bg_blue_principal
                 flex flex-col items-center justify-center gap-2">
-                <span className="font-bold text-white text-7xl">{scoreFinal}</span>
+                <span id="number" className="font-bold text-white text-7xl"></span>
                 <h5 className='text-title_text_matte'>of 100</h5>
             </div>
             <div className='flex flex-col gap-2 px-4 text-center'>

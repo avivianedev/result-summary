@@ -9,16 +9,24 @@ export default function Home() {
   const [btnAtived, SetBtnAtived] = useState(false)
 
   const Calculate = () => {
+    const number = document.getElementById('number')
     const score = data.map(score => score.score)
     const scoreTotal = score.reduce((total, preco) => total + preco, 0)
     const scoreFinal = Math.round(scoreTotal / score.length)
-    SetScoreTot(scoreFinal)
+
+    for (let i = 0; i <= scoreFinal; i++) {
+      setTimeout(function (nr) {
+        number.innerHTML = nr
+      }, i * 1000 / scoreFinal, i);
+    }
+    //SetScoreTot(scoreFinal)
     SetBtnAtived(!btnAtived)
-    return scoreFinal
+    //return scoreFinal
+    return
   }
 
   const zeroScoreTot = () => {
-    SetScoreTot(0)
+    number.innerHTML = "0"
     SetBtnAtived(!btnAtived)
   }
   return (
@@ -26,7 +34,7 @@ export default function Home() {
       <div className="flex flex-col items-center lgl:h-screen w-[100%] font-bodyFont lgl:w-[100%]">
         <div className="items-center justify-center h-screen gap-3 lgl:flex">
           <ConsolidateResult
-            scoreFinal={scoreTot}
+
           />
           <Summary
             onclick={Calculate}
