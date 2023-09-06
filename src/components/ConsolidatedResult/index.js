@@ -16,11 +16,11 @@ export default function ConsolidateResult({ scoreFinal }) {
                 bg-gradient-to-b from-bg_gradient_blue to-bg_blue_principal
                 flex flex-col items-center justify-center gap-2">
                 <span id="number" className="font-bold text-white text-7xl"></span>
-                <h5 className='text-title_text_matte'>of 100</h5>
+                <h5 className={`text-title_text_matte`}>of 100</h5>
             </div>
             <div className='flex flex-col gap-2 px-4 text-center'>
-                <h2 className="text-3xl font-semibold text-title_text">Great</h2>
-                <p className="text-xl text-center text-title_text_matte">You scored higher than 65% of the people who have taken these tests.</p>
+                <h2 className={`text-3xl font-semibold text-title_text`}>Great</h2>
+                <p className={`text-xl text-center text-title_text_matte`}>You scored higher than 65% of the people who have taken these tests.</p>
             </div>
         </div>
     )
